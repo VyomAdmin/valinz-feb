@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a192f;
+  --foreground: #ccd6f6;
+
+  /* ValinzTech Palette */
+  --color-primary-dark: #0a192f;
+  /* Deep Blue Background */
+  --color-secondary-dark: #112240;
+  /* Navy - Card Background */
+  --color-tertiary-dark: #233554;
+  /* Slate Blue - Borders/Accents */
+
+  --color-text-primary: #ccd6f6;
+  /* Soft Gray - Headings */
+  --color-text-secondary: #8892b0;
+  /* Muted Steel - Body */
+  --color-text-accent: #64ffda;
+  /* Tech Green/Blue for highlights - keeping subtle */
+  --color-text-white: #e6f1ff;
+  /* Bright White */
+
+  --font-sans: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: var(--color-text-white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-text-white);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.card {
+  background-color: var(--color-secondary-dark);
+  border: 1px solid var(--color-tertiary-dark);
+  padding: 2rem;
+  border-radius: 4px;
+  /* Slight rounding for modern feel, but kept structured */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: var(--color-text-white);
+  border: 1px solid var(--color-text-white);
+}
+
+.btn-primary:hover {
+  background-color: rgba(230, 241, 255, 0.1);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-text-secondary);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(136, 146, 176, 0.1);
+  color: var(--color-text-white);
+  border-color: var(--color-text-white);
+}
