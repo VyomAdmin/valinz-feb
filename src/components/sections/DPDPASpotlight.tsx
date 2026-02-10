@@ -15,7 +15,7 @@ const DPDPASpotlight = () => {
                             With penalties up to ₹250 crores, organizations need systematic frameworks—not just checklists.
                         </p>
                     </div>
-                    <Button variant="outline" href="#contact">
+                    <Button variant="primary" href="#contact" className="shadow-lg whitespace-nowrap">
                         Explore DPDPA Services <ArrowRight size={16} className="ml-2" />
                     </Button>
                 </div>
@@ -65,7 +65,7 @@ const DPDPASpotlight = () => {
                     </div>
                 </div>
 
-                <p className="text-center text-[var(--color-text-secondary)] text-sm mt-12 opacity-60">
+                <p className="text-center text-white text-base font-bold mt-12 mb-4">
                     From readiness assessment to full implementation | Fixed-scope engagements
                 </p>
             </div>

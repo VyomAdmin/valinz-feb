@@ -19,23 +19,24 @@ const FinalCTA = () => {
                     </Button>
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 text-[var(--color-text-secondary)]">
-                    <a href="mailto:contact@valinztech.com" className="flex items-center gap-2 hover:text-[var(--color-text-white)] transition-colors">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 text-white font-medium">
+                    <a href="mailto:contact@valinztech.com" className="flex items-center gap-2 hover:text-[var(--color-text-accent)] transition-colors">
                         <Mail size={20} />
                         <span>contact@valinztech.com</span>
                     </a>
-                    <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-2 hover:text-[var(--color-text-white)] transition-colors">
+                    <a href="tel:+919953562762" className="flex items-center gap-2 hover:text-[var(--color-text-accent)] transition-colors">
                         <Phone size={20} />
-                        <span>+91-XXX-XXX-XXXX</span>
+                        <span>+91-9953562762</span>
                     </a>
-                    <a href="#" className="flex items-center gap-2 hover:text-[var(--color-text-white)] transition-colors">
+                    <a href="#" className="flex items-center gap-2 hover:text-[var(--color-text-accent)] transition-colors">
                         <MessageCircle size={20} />
                         <span>WhatsApp Consultation</span>
                     </a>
                 </div>
 
-                <div className="mt-12 text-sm text-[var(--color-text-secondary)] opacity-60">
-                    Initial consultations are complimentary and no-obligation. We&apos;ll understand your situation and determine how we can help.
+                <div className="mt-16 text-lg text-white font-bold bg-[rgba(100,255,218,0.1)] p-6 rounded-xl border border-[rgba(100,255,218,0.2)] shadow-lg backdrop-blur-sm">
+                    Initial consultations are complimentary and no-obligation. <br className="hidden md:block" />
+                    We&apos;ll understand your situation and determine how we can help.
                 </div>
             </div>
         </section>

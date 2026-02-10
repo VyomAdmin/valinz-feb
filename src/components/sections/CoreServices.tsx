@@ -25,7 +25,7 @@ const CoreServices = () => {
             icon: <Users className="text-[var(--color-text-accent)]" size={32} />
         },
         {
-            title: 'Compliance & Risk Mgt',
+            title: 'Compliance & Risk Management',
             desc: 'Governance, Risk & Compliance through structured, intelligence-driven programs.',
             icon: <CheckSquare className="text-[var(--color-text-accent)]" size={32} />
         },
