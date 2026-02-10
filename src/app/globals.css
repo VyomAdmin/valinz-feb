@@ -23,7 +23,8 @@
   --color-text-white: #e6f1ff;
   /* Bright White */
 
-  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+  --font-sans: var(--font-hanken-grotesk);
 }
 
 * {
@@ -48,10 +49,13 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-heading);
   color: var(--color-text-primary);
-  font-weight: 600;
+  /* font-weight: 600; Removed to allow specific weights from components/font definitions */
   line-height: 1.2;
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  /* Slightly tight letter spacing for modern feel */
 }
 
 h1 {
