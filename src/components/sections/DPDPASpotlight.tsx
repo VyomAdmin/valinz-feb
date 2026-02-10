@@ -12,7 +12,7 @@ const DPDPASpotlight = () => {
                         <h2 className="text-3xl md:text-4xl">DPDPA Compliance: India&apos;s New Data Protection Reality</h2>
                         <p className="text-[var(--color-text-secondary)] mt-4 text-lg">
                             The Digital Personal Data Protection Act (DPDPA) 2023 brings significant compliance obligations.
-                            With penalties up to ₹250 crores, organizations need systematic frameworks—not just checklists.
+                            With penalties up to ₹250 crore, organizations need systematic frameworks—not just checklists.
                         </p>
                     </div>
                     <Button variant="primary" href="#contact" className="shadow-lg whitespace-nowrap">
@@ -43,7 +43,7 @@ const DPDPASpotlight = () => {
                         </div>
                         <h3 className="text-xl font-semibold mb-3 text-[var(--color-text-white)]">Framework Implementation</h3>
                         <p className="text-[var(--color-text-secondary)] text-sm mb-4">
-                            Systematic governance structures for Notice & Consent, Data security, Breach management and customer rights.
+                            Systematic governance structures for Notice & Consent, Data Security, Breach Management, and Customer Rights.
                         </p>
                         <span className="text-xs font-medium text-[var(--color-text-accent)] flex items-center gap-1 group-hover:gap-2 transition-all">
                             Learn more <ArrowRight size={12} />

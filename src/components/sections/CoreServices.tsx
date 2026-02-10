@@ -11,7 +11,7 @@ const CoreServices = () => {
         },
         {
             title: 'Cybersecurity Consulting',
-            desc: 'Risk Assessment, Compliance and Threat mitigation.',
+            desc: 'Risk Assessment, Compliance, and Threat Mitigation.',
             icon: <Shield className="text-[var(--color-text-accent)]" size={32} />
         },
         {
