@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Button from '../ui/Button';
+import Logo from '../ui/Logo';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -34,8 +35,8 @@ const Header = () => {
             }}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <Link href="/" className="text-2xl font-bold tracking-tight text-[var(--color-text-white)]">
-                    VALINZ<span style={{ color: 'var(--color-text-secondary)' }}>TECH</span>
+                <Link href="/" className="flex items-center">
+                    <Logo className="h-10 w-auto" variant="dark" />
                 </Link>
 
                 {/* Desktop Navigation */}

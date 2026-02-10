@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import Logo from '../ui/Logo';
 
 const Footer = () => {
     return (
@@ -10,7 +11,9 @@ const Footer = () => {
 
                     {/* Column 1: About */}
                     <div>
-                        <h3 className="text-xl font-bold mb-6 text-[var(--color-text-white)]">ValinzTech</h3>
+                        <div className="mb-6">
+                            <Logo className="h-12 w-auto" variant="dark" />
+                        </div>
                         <p className="text-[var(--color-text-secondary)] mb-6 text-sm leading-relaxed">
                             Serving Delhi NCR | ISO 27001 Expertise | DPDPA Specialists.
                             Trust, Intelligence, Compliance.
