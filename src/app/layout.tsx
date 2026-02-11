@@ -19,6 +19,12 @@ const hankenGrotesk = Hanken_Grotesk({
 export const metadata: Metadata = {
   title: "ValinzTech | Intelligence-Driven Technology Governance",
   description: "We help organizations build intelligent, secure, compliant, and future-ready technology systems through systematic governance frameworks.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export default function RootLayout({
