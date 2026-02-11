@@ -15,7 +15,7 @@ const Footer = () => {
                             <Logo className="h-12 w-auto" variant="dark" />
                         </div>
                         <p className="text-[var(--color-text-secondary)] mb-6 text-sm leading-relaxed">
-                            Serving Delhi NCR | ISO 27001 Expertise | DPDPA Specialists.
+                            Serving Delhi NCR and beyond | ISO 27001 Expertise | DPDPA Specialists.
                             Trust, Intelligence, Compliance.
                         </p>
                     </div>

@@ -26,7 +26,7 @@ const ComingSoon = () => {
 
                     <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tight leading-none text-white uppercase italic pr-4">
                         Coming <br />
-                        <span className="text-[var(--color-text-white)] bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-blue-400 inline-block pr-6">Soon</span>
+                        <span className="text-[var(--color-text-white)] bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-blue-400 inline-block pr-6">Back Soon</span>
                     </h1>
 
                     <p className="text-xl md:text-2xl text-[var(--color-text-secondary)] mb-12 leading-relaxed font-medium">

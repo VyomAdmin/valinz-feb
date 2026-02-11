@@ -41,7 +41,7 @@ const Hero = () => {
                         <div className="pt-10 border-t border-[rgba(255,255,255,0.1)] flex flex-wrap gap-x-12 gap-y-4 text-base font-semibold text-white">
                             <span className="flex items-center gap-3">
                                 <span className="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]"></span>
-                                Serving Delhi NCR
+                                Serving Delhi NCR and beyond
                             </span>
                             <span className="flex items-center gap-3">
                                 <span className="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]"></span>
