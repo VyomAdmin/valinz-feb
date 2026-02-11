@@ -72,6 +72,12 @@ a:hover {
   color: var(--color-text-white);
 }
 
+a[href^="mailto:"]:hover,
+a[href^="mailto:"]:active,
+a[href^="mailto:"]:focus {
+  color: #64ffda !important;
+}
+
 a:visited {
   color: #64ffda;
 }
