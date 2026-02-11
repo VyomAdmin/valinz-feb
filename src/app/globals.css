@@ -72,6 +72,16 @@ a:hover {
   color: var(--color-text-white);
 }
 
+a:visited {
+  color: #64ffda;
+}
+
+/* Ensure buttons and colored links don't inherit visited color if they are meant to be dark/different */
+.btn:visited,
+.bg-white:visited {
+  color: inherit;
+}
+
 /* Utility Classes */
 .container {
   max-width: 1200px;
