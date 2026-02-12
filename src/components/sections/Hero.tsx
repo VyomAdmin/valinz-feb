@@ -19,9 +19,9 @@ const Hero = () => {
                             <span className="text-xs font-bold tracking-[0.2em] text-[var(--color-text-accent)] uppercase">Trust. Intelligence. Compliance.</span>
                         </div>
 
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tight leading-[0.95] text-white">
-                            Intelligence <br />
-                            <span className="text-[var(--color-text-white)] bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-blue-400">Governance</span>
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 tracking-tight leading-[1.02] text-white">
+                            Intelligence-Driven<br />
+                            <span className="text-[var(--color-text-white)] bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-blue-400">Technology Governance</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-[var(--color-text-secondary)] mb-12 max-w-xl leading-relaxed font-medium">
