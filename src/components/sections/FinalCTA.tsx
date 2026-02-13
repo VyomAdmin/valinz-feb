@@ -28,7 +28,12 @@ const FinalCTA = () => {
                         <Phone size={20} />
                         <span>+91-9953562762</span>
                     </a>
-                    <a href="#" className="flex items-center gap-2 hover:text-[var(--color-text-accent)] transition-colors">
+                    <a
+                        href="https://wa.me/919953562762"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 hover:text-[var(--color-text-accent)] transition-colors"
+                    >
                         <MessageCircle size={20} />
                         <span>WhatsApp Consultation</span>
                     </a>
