@@ -2,15 +2,23 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight, Mail, Phone, MessageCircle } from 'lucide-react';
 import Button from '../ui/Button';
 import Logo from '../ui/Logo';
+import Image from 'next/image';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const navigation = [
         {
@@ -18,33 +26,34 @@ const Header = () => {
             href: '#services',
             dropdown: [
                 { name: 'DPDPA Compliance', href: '#dpdpa' },
-                { name: 'All Services', href: '#services' }
+                { name: 'Core Services', href: '#services' },
+                { name: 'Technical Audits', href: '#services' }
             ]
         },
-        { name: 'About & Contact', href: '#about' },
+        { name: 'About', href: '#about' },
         {
             name: 'Resources',
             href: '#insights',
             dropdown: [
-                { name: 'Blog', href: '#insights' },
-                { name: 'Case Studies', href: '#insights' },
-                { name: 'Downloads', href: '#insights' }
+                { name: 'Blog', href: '#' },
+                { name: 'Case Studies', href: '#' }
             ]
-        }
+        },
+        { name: 'Contact', href: '#contact' }
     ];
 
     return (
         <header
-            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#050A18]/90 backdrop-blur-md shadow-lg border-b border-white/5 py-3' : 'bg-transparent py-5'
+            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#020617]/90 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'
                 }`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link href="/" className="flex items-center">
-                    <span className="text-xl font-bold tracking-tighter text-white">VALINZ<span className="text-[#64ffda]">TECH</span></span>
+                    <Logo className="h-8 w-auto" variant="dark" />
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center gap-10">
+                <nav className="hidden lg:flex items-center gap-10">
                     {navigation.map((item) => (
                         <div
                             key={item.name}
@@ -54,20 +63,20 @@ const Header = () => {
                         >
                             <Link
                                 href={item.href}
-                                className="text-xs font-bold tracking-widest uppercase text-slate-400 hover:text-[#64ffda] transition-colors flex items-center gap-1.5"
+                                className="text-[10px] font-black tracking-[0.2em] uppercase text-slate-400 hover:text-white transition-colors flex items-center gap-2"
                             >
                                 {item.name}
-                                {item.dropdown && <ChevronRight size={10} className={`rotate-90 transition-transform ${activeDropdown === item.name ? 'rotate-[270deg]' : ''}`} />}
+                                {item.dropdown && <ChevronRight size={10} className={`chevron-transition ${activeDropdown === item.name ? 'rotate-90' : ''}`} />}
                             </Link>
 
                             {item.dropdown && activeDropdown === item.name && (
-                                <div className="absolute top-full left-0 pt-4 animate-in fade-in slide-in-from-top-2 duration-200">
-                                    <div className="bg-[#0D1426] border border-white/10 rounded-xl p-2 min-w-[200px] shadow-2xl">
+                                <div className="absolute top-full left-0 pt-6 animate-in fade-in slide-in-from-top-2 duration-200">
+                                    <div className="bg-[#0D1426] border border-white/5 rounded-2xl p-3 min-w-[220px] shadow-2xl">
                                         {item.dropdown.map((subItem) => (
                                             <Link
                                                 key={subItem.name}
                                                 href={subItem.href}
-                                                className="block px-4 py-3 text-xs font-semibold text-slate-300 hover:text-[#64ffda] hover:bg-white/5 rounded-lg transition-colors"
+                                                className="block px-5 py-3.5 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all"
                                             >
                                                 {subItem.name}
                                             </Link>
@@ -77,14 +86,14 @@ const Header = () => {
                             )}
                         </div>
                     ))}
-                    <Button variant="primary" href="#contact" className="ml-4 py-2 px-6 text-xs bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda]/20 rounded-full">
-                        Free Consultation
+                    <Button variant="primary" href="#contact" className="ml-6 py-4 px-8 text-[10px] font-bold tracking-widest bg-white text-slate-900 border-none hover:bg-slate-100 rounded-full shadow-lg">
+                        SCHEDULE CONSULTATION
                     </Button>
                 </nav>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-white"
+                    className="lg:hidden text-white p-2"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -93,24 +102,24 @@ const Header = () => {
 
             {/* Mobile Navigation */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-[#0D1426] border-b border-white/10 py-8 shadow-2xl animate-in fade-in slide-in-from-top-4">
-                    <nav className="flex flex-col px-6 gap-6">
+                <div className="lg:hidden absolute top-full left-0 w-full bg-[#020617] border-b border-white/5 py-10 shadow-2xl animate-in fade-in slide-in-from-top-4">
+                    <nav className="flex flex-col px-6 gap-8">
                         {navigation.map((item) => (
-                            <div key={item.name} className="space-y-4">
+                            <div key={item.name} className="space-y-6">
                                 <Link
                                     href={item.href}
-                                    className="text-lg font-bold text-white block"
+                                    className="text-2xl font-black text-white tracking-tighter"
                                     onClick={() => !item.dropdown && setIsMobileMenuOpen(false)}
                                 >
                                     {item.name}
                                 </Link>
                                 {item.dropdown && (
-                                    <div className="pl-4 flex flex-col gap-4 border-l border-white/5">
+                                    <div className="pl-6 flex flex-col gap-6 border-l border-white/5">
                                         {item.dropdown.map((subItem) => (
                                             <Link
                                                 key={subItem.name}
                                                 href={subItem.href}
-                                                className="text-slate-400 font-medium"
+                                                className="text-lg font-bold text-slate-400"
                                                 onClick={() => setIsMobileMenuOpen(false)}
                                             >
                                                 {subItem.name}
@@ -120,8 +129,8 @@ const Header = () => {
                                 )}
                             </div>
                         ))}
-                        <Button variant="primary" href="#contact" className="mt-4 w-full justify-center py-4 bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda]" onClick={() => setIsMobileMenuOpen(false)}>
-                            Free Consultation
+                        <Button variant="primary" href="#contact" className="mt-6 w-full justify-center py-5 bg-white text-slate-900 border-none font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+                            SCHEDULE CONSULTATION
                         </Button>
                     </nav>
                 </div>

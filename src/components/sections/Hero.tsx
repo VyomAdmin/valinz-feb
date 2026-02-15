@@ -9,12 +9,14 @@ const Hero = () => {
             {/* Immersive Background Effects */}
             <div className="absolute inset-0 z-0">
                 {/* Subtle Geometric Grid / Structured Pattern */}
-                <div className="absolute inset-0 opacity-[0.05]"
+                <div
+                    className="absolute inset-0 opacity-[0.05]"
                     style={{
-                        backgroundImage: 'radial-gradient(circle at 1px 1px, #64ffda 1px, transparent 0)',
-                        backgroundSize: '32px 32px'
-                    }}>
-                </div>
+                        backgroundImage:
+                            'radial-gradient(circle at 1px 1px, #64ffda 1px, transparent 0)',
+                        backgroundSize: '32px 32px',
+                    }}
+                ></div>
 
                 {/* Soft blue lighting gradients */}
                 <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[60%] h-[40%] bg-[#3b82f6]/10 rounded-full blur-[120px]"></div>
@@ -22,8 +24,14 @@ const Hero = () => {
 
                 {/* Subtle animated structural framework lines */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-                    <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#64ffda]/20 to-transparent animate-pulse" style={{ animationDuration: '5s' }}></div>
-                    <div className="absolute top-2/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#3b82f6]/20 to-transparent animate-pulse" style={{ animationDuration: '7s' }}></div>
+                    <div
+                        className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#64ffda]/20 to-transparent animate-pulse"
+                        style={{ animationDuration: '5s' }}
+                    ></div>
+                    <div
+                        className="absolute top-2/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#3b82f6]/20 to-transparent animate-pulse"
+                        style={{ animationDuration: '7s' }}
+                    ></div>
                     <div className="absolute top-0 left-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
                     <div className="absolute top-0 right-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
                 </div>
@@ -31,46 +39,57 @@ const Hero = () => {
 
             <div className="container mx-auto px-6 relative z-10 text-center">
                 <div className="max-w-4xl mx-auto flex flex-col items-center">
-
-                    {/* Hero Visual Element: Icon in Glass Framed Container */}
-                    <div className="mb-14 relative group">
-                        <div className="absolute -inset-10 bg-[#64ffda]/10 blur-3xl rounded-full opacity-40 group-hover:opacity-60 transition-opacity duration-1000"></div>
-
-                        <div className="relative z-10 transform transition-transform duration-1000 ease-out">
-                            <div className="p-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] shadow-2xl">
-                                <Image
-                                    src="/images/Valinz-Icon.jpeg"
-                                    alt="ValinzTech Icon"
-                                    width={160}
-                                    height={160}
-                                    className="w-[120px] md:w-[140px] h-auto rounded-[2rem] shadow-2xl contrast-110 saturate-[0.9] brightness-105"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Decorative structural lines around icon */}
-                        <div className="absolute -top-6 -right-6 w-16 h-16 border-t border-r border-[#64ffda]/20 rounded-tr-3xl"></div>
-                        <div className="absolute -bottom-6 -left-6 w-16 h-16 border-b border-l border-[#64ffda]/20 rounded-bl-3xl"></div>
-                    </div>
-
                     <div className="mb-8 inline-block px-5 py-2 border border-[#64ffda]/15 rounded-full backdrop-blur-md bg-blue-900/5">
-                        <span className="text-[10px] font-bold tracking-[0.3em] text-[#64ffda] uppercase">Intelligence-Driven Governance</span>
+                        <span className="text-[10px] font-bold tracking-[0.3em] text-[#64ffda] uppercase">
+                            Intelligence-Driven Governance
+                        </span>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter leading-[1.0] text-white">
-                        Intelligence-Driven Technology<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500">Governance</span>
-                    </h1>
+                    {/* ONE H1 so spacing between Technology and Governance stays "regular" */}
+                    <div className="w-full flex items-start justify-between gap-6 mb-8">
+                        <h1 className="text-left text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.0] text-white">
+                            Intelligence-Driven Technology
+                            <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500">
+                                Governance
+                            </span>
+                        </h1>
 
-                    <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-medium font-sans">
-                        ValinzTech helps organizations build trust in the digital age through systematic governance frameworks and expert guidance.
+                        {/* Metallic Icon Visual (right side) */}
+                        <div className="relative w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 flex-shrink-0 group mt-2">
+                            <div className="absolute inset-0 bg-blue-500/20 blur-2xl rounded-full group-hover:bg-blue-500/30 transition-all duration-500"></div>
+                            <Image
+                                src="/1x/Valinz-Icon.jpeg"
+                                alt="ValinzTech Metallic Icon"
+                                width={128}
+                                height={128}
+                                priority
+                            />
+                        </div>
+                    </div>
+
+                    <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-4xl leading-relaxed font-medium font-sans">
+                        ValinzTech helps organizations build trust in the digital age through
+                        systematic governance frameworks and expert guidance.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 mb-16 w-full sm:w-auto justify-center">
-                        <Button variant="primary" href="#about" className="text-sm py-4 px-12 uppercase tracking-widest bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda]/20 rounded-full group">
-                            Explore About Us <ChevronRight size={16} className="ml-2 inline group-hover:translate-x-1 transition-transform" />
+                        <Button
+                            variant="primary"
+                            href="#about"
+                            className="text-sm py-4 px-12 uppercase tracking-widest bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda]/20 rounded-full group"
+                        >
+                            Explore About Us{' '}
+                            <ChevronRight
+                                size={16}
+                                className="ml-2 inline group-hover:translate-x-1 transition-transform"
+                            />
                         </Button>
-                        <Button variant="secondary" href="#contact" className="text-sm py-4 px-12 uppercase tracking-widest backdrop-blur-sm bg-white/5 border-white/10 hover:bg-white/10 hover:text-white rounded-full">
+                        <Button
+                            variant="secondary"
+                            href="#contact"
+                            className="text-sm py-4 px-12 uppercase tracking-widest backdrop-blur-sm bg-white/5 border-white/10 hover:bg-white/10 hover:text-white rounded-full"
+                        >
                             Free Consultation
                         </Button>
                     </div>

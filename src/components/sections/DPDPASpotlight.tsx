@@ -1,73 +1,67 @@
 import React from 'react';
 import Button from '../ui/Button';
-import { ClipboardCheck, Grid, ShieldCheck, ArrowRight } from 'lucide-react';
+import { ClipboardCheck, Grid, ShieldCheck } from 'lucide-react';
 
 const DPDPASpotlight = () => {
     return (
-        <section id="dpdpa" className="section bg-[var(--color-secondary-dark)] border-y border-[var(--color-tertiary-dark)]">
+        <section id="dpdpa" className="py-24 bg-[#0D1426] border-y border-white/5">
             <div className="container mx-auto px-6">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                    <div className="max-w-2xl">
-                        <div className="text-[var(--color-text-accent)] font-semibold text-xs tracking-widest uppercase mb-2">Featured Service</div>
-                        <h2 className="text-3xl md:text-4xl">DPDPA Compliance: India&apos;s New Data Protection Reality</h2>
-                        <p className="text-[var(--color-text-secondary)] mt-4 text-lg">
-                            The Digital Personal Data Protection Act (DPDPA) 2023 brings significant compliance obligations.
-                            With penalties up to ₹250 crore, organizations need systematic frameworks—not just checklists.
-                        </p>
+                <div className="max-w-4xl mx-auto text-center mb-16">
+                    <div className="inline-block px-4 py-1 border border-blue-500/20 rounded-full bg-blue-900/10 mb-6">
+                        <span className="text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase">Featured Service</span>
                     </div>
-                    <Button variant="primary" href="#contact" className="shadow-lg whitespace-nowrap">
-                        Explore DPDPA Services <ArrowRight size={16} className="ml-2" />
-                    </Button>
+                    <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+                        DPDPA Compliance: India&apos;s New Data Protection Reality
+                    </h2>
+                    <p className="text-xl text-slate-400 leading-relaxed font-medium">
+                        The Digital Personal Data Protection Act (DPDPA) 2023 brings significant compliance obligations for organizations handling Indian citizens' data. With penalties up to ₹250 crores, organizations need systematic frameworks—not just checklists.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {/* Card 1 */}
-                    <div className="card p-8 group">
-                        <div className="mb-6 w-12 h-12 rounded bg-[rgba(100,255,218,0.1)] flex items-center justify-center text-[var(--color-text-accent)] group-hover:scale-110 transition-transform">
-                            <ClipboardCheck size={24} />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                    {/* Gap Assessment */}
+                    <div className="bg-[#020617]/50 border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center group hover:border-blue-500/20 transition-all">
+                        <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8">
+                            <ClipboardCheck className="text-blue-400" size={28} />
                         </div>
-                        <h3 className="text-xl font-semibold mb-3 text-[var(--color-text-white)]">Gap Assessment</h3>
-                        <p className="text-[var(--color-text-secondary)] text-sm mb-4">
+                        <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">Gap Assessment</h3>
+                        <p className="text-slate-400 text-sm font-medium leading-relaxed">
                             Comprehensive analysis of current compliance posture against DPDPA requirements.
                         </p>
-                        <span className="text-xs font-medium text-[var(--color-text-accent)] flex items-center gap-1 group-hover:gap-2 transition-all">
-                            Learn more <ArrowRight size={12} />
-                        </span>
                     </div>
 
-                    {/* Card 2 */}
-                    <div className="card p-8 group border-[var(--color-text-accent)] relative">
-                        <div className="absolute top-0 right-0 p-2 bg-[var(--color-text-accent)] text-[var(--color-primary-dark)] text-xs font-bold rounded-bl">KEY STEP</div>
-                        <div className="mb-6 w-12 h-12 rounded bg-[rgba(100,255,218,0.1)] flex items-center justify-center text-[var(--color-text-accent)] group-hover:scale-110 transition-transform">
-                            <Grid size={24} />
+                    {/* Framework Implementation */}
+                    <div className="bg-[#020617]/50 border border-blue-500/30 rounded-[2rem] p-10 flex flex-col items-center text-center group relative overflow-hidden">
+                        <div className="absolute top-0 right-0 py-1.5 px-4 bg-blue-500 text-[10px] font-black uppercase text-white tracking-[0.2em] rounded-bl-xl">Key Step</div>
+                        <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8">
+                            <Grid className="text-blue-400" size={28} />
                         </div>
-                        <h3 className="text-xl font-semibold mb-3 text-[var(--color-text-white)]">Framework Implementation</h3>
-                        <p className="text-[var(--color-text-secondary)] text-sm mb-4">
-                            Systematic governance structures for Notice & Consent, Data Security, Breach Management, and Customer Rights.
+                        <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">Framework Implementation</h3>
+                        <p className="text-slate-400 text-sm font-medium leading-relaxed">
+                            Systematic governance structures for Notice & Consent, Data security, and Breach management.
                         </p>
-                        <span className="text-xs font-medium text-[var(--color-text-accent)] flex items-center gap-1 group-hover:gap-2 transition-all">
-                            Learn more <ArrowRight size={12} />
-                        </span>
                     </div>
 
-                    {/* Card 3 */}
-                    <div className="card p-8 group">
-                        <div className="mb-6 w-12 h-12 rounded bg-[rgba(100,255,218,0.1)] flex items-center justify-center text-[var(--color-text-accent)] group-hover:scale-110 transition-transform">
-                            <ShieldCheck size={24} />
+                    {/* Ongoing Assurance */}
+                    <div className="bg-[#020617]/50 border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center group hover:border-blue-500/20 transition-all">
+                        <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8">
+                            <ShieldCheck className="text-blue-400" size={28} />
                         </div>
-                        <h3 className="text-xl font-semibold mb-3 text-[var(--color-text-white)]">Ongoing Assurance</h3>
-                        <p className="text-[var(--color-text-secondary)] text-sm mb-4">
+                        <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">Ongoing Assurance</h3>
+                        <p className="text-slate-400 text-sm font-medium leading-relaxed">
                             Continuous monitoring and validation to maintain compliance.
                         </p>
-                        <span className="text-xs font-medium text-[var(--color-text-accent)] flex items-center gap-1 group-hover:gap-2 transition-all">
-                            Learn more <ArrowRight size={12} />
-                        </span>
                     </div>
                 </div>
 
-                <p className="text-center text-white text-base font-bold mt-12 mb-4">
-                    From readiness assessment to full implementation | Fixed-scope engagements
-                </p>
+                <div className="flex flex-col items-center gap-6">
+                    <Button variant="primary" href="#contact" className="text-sm py-5 px-12 bg-white text-slate-900 border-none rounded-full font-bold shadow-xl">
+                        Explore DPDPA Services →
+                    </Button>
+                    <p className="text-lg font-bold text-white uppercase tracking-widest opacity-80">
+                        Fixed-scope engagements | Delhi NCR Specialists
+                    </p>
+                </div>
             </div>
         </section>
     );

@@ -6,7 +6,7 @@ const Mission = () => {
         {
             icon: Target,
             title: "Our Mission",
-            description: "To empower organizations with Intelligence-Driven Technology Governance frameworks that build trust, ensure compliance, and drive digital transformation."
+            description: "To empower organizations with Intelligence-Driven Technology Governance frameworks that build trust and ensure compliance."
         },
         {
             icon: Users,
@@ -16,44 +16,36 @@ const Mission = () => {
         {
             icon: Lightbulb,
             title: "Our Purpose",
-            description: "Bridging the gap between complex regulatory requirements and practical business implementation through expert guidance and systematic frameworks."
+            description: "Bridging the gap between complex regulatory requirements and practical business implementation through systematic frameworks."
         }
     ];
 
     return (
-        <section id="about" className="py-24 bg-[#050A18]">
+        <section id="about" className="py-24 bg-[#020617] border-t border-white/5">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-20">
-                    <div className="inline-block px-4 py-1.5 border border-blue-500/20 rounded-full bg-blue-900/10 mb-6">
-                        <span className="text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase">Purpose & Values</span>
-                    </div>
-                    <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">
+                <div className="max-w-4xl mx-auto text-center mb-20">
+                    <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase">
                         Why We Exist
                     </h2>
-                    <p className="text-lg text-slate-400 max-w-2xl mx-auto font-medium">
-                        ValinzTech helps organizations build trust in the digital age through systematic governance frameworks and expert guidance.
+                    <p className="text-xl text-slate-400 leading-relaxed font-medium">
+                        ValinzTech helps organizations build trust in the digital age through systematic governance frameworks.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
                     {missions.map((item, index) => {
                         const Icon = item.icon;
                         return (
-                            <div
-                                key={index}
-                                className="group relative"
-                            >
-                                <div className="h-full bg-[#0D1426]/30 border border-white/5 p-10 rounded-[2.5rem] hover:border-blue-500/20 transition-all duration-500 flex flex-col items-center text-center">
-                                    <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-500/20 transition-colors">
-                                        <Icon className="w-8 h-8 text-blue-400" />
-                                    </div>
-                                    <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-slate-400 text-sm font-medium leading-relaxed">
-                                        {item.description}
-                                    </p>
+                            <div key={index} className="flex flex-col bg-[#0D1426]/30 border border-white/5 p-12 rounded-[3rem] hover:border-blue-500/20 transition-all text-center items-center">
+                                <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-10">
+                                    <Icon className="text-blue-400" size={32} />
                                 </div>
+                                <h3 className="text-2xl font-bold text-white mb-6 tracking-tight">
+                                    {item.title}
+                                </h3>
+                                <p className="text-slate-500 font-medium leading-relaxed">
+                                    {item.description}
+                                </p>
                             </div>
                         );
                     })}

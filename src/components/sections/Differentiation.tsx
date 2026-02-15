@@ -2,52 +2,47 @@ import React from 'react';
 import { Brain, Box, Share2 } from 'lucide-react';
 
 const Differentiation = () => {
-    const differentiators = [
+    const diffs = [
         {
-            title: 'Understanding Drives Results',
-            desc: "We help you understand the 'why' behind requirements, not just the 'what.' Our clients gain both compliance and capability—reducing dependency while building internal expertise.",
-            icon: Brain
-        },
-        {
-            title: 'Systematic Frameworks, Not Checklists',
-            desc: "We establish governance structures that bring order to complexity. Our methodologies create sustainable systems that evolve with your organization and regulatory landscape.",
+            title: "Architecture over Checklists",
+            description: "We don't just tick boxes. We build systematic governance architectures that integrate deeply into your technology stack.",
             icon: Box
         },
         {
-            title: 'Holistic Governance Approach',
-            desc: "We see connections others miss. Privacy, security, AI, and compliance aren't isolated domains—we integrate them into cohesive governance that reduces real business risk.",
+            title: "Intelligence-Driven",
+            description: "Using proactive, data-informed strategies to anticipate risks before they impact your organization.",
+            icon: Brain
+        },
+        {
+            title: "Holistic Governance",
+            description: "Bridging the gap between legal policy, technical security, and business objectives through single-framework alignment.",
             icon: Share2
         }
     ];
 
     return (
-        <section id="differentiation" className="py-24 bg-[#050A18]">
+        <section className="py-24 bg-[#0D1426] border-y border-white/5">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-20">
-                    <div className="inline-block px-4 py-1.5 border border-white/5 rounded-full bg-slate-400/5 mb-6">
-                        <span className="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase">The Valinz Difference</span>
-                    </div>
-                    <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">
-                        Intelligence Induced <br /> Into Every Engagement
+                <div className="max-w-4xl mx-auto text-center mb-20">
+                    <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tighter">
+                        The ValinzTech Difference
                     </h2>
-                    <p className="text-lg text-slate-400 max-w-2xl mx-auto font-medium">
-                        We don't just implement compliance—we build the frameworks your organization will depend on.
+                    <p className="text-lg text-slate-400 leading-relaxed font-medium">
+                        Why the world's most innovative companies choose our systematic approach to governance.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    {differentiators.map((item, index) => {
+                    {diffs.map((item, index) => {
                         const Icon = item.icon;
                         return (
-                            <div key={index} className="group h-full bg-[#0D1426]/30 border border-white/5 p-12 rounded-[3rem] hover:border-blue-500/20 transition-all duration-500 flex flex-col items-center text-center">
-                                <div className="w-20 h-20 bg-blue-500/5 rounded-[2rem] flex items-center justify-center mb-10 group-hover:bg-blue-500/10 transition-colors">
-                                    <Icon className="w-10 h-10 text-blue-400/70" />
+                            <div key={index} className="bg-[#020617]/50 border border-white/5 p-10 rounded-[2.5rem] hover:border-blue-500/20 transition-all">
+                                <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8">
+                                    <Icon className="text-blue-400" size={28} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-6 tracking-tight">
-                                    {item.title}
-                                </h3>
-                                <p className="text-slate-400 font-medium leading-relaxed">
-                                    {item.desc}
+                                <h3 className="text-xl font-bold text-white mb-4 tracking-tight">{item.title}</h3>
+                                <p className="text-slate-500 text-sm font-medium leading-relaxed">
+                                    {item.description}
                                 </p>
                             </div>
                         );
