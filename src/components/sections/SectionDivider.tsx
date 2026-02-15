@@ -2,27 +2,23 @@ import React from 'react';
 
 const SectionDivider = () => {
     return (
-        <section className="py-16 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-y border-slate-800/50">
-            <div className="container mx-auto px-6">
-                <div className="max-w-6xl mx-auto">
-                    {/* Subtle structured pattern */}
-                    <div className="relative">
-                        <div className="absolute inset-0 opacity-10">
-                            <div className="grid grid-cols-12 gap-4 h-full">
-                                {[...Array(12)].map((_, i) => (
-                                    <div key={i} className="border-l border-blue-500/30"></div>
-                                ))}
-                            </div>
-                        </div>
+        <section className="relative h-64 flex items-center justify-center overflow-hidden">
+            {/* Soft Gradient Shift */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#050A18] via-blue-900/5 to-[#050A18]"></div>
 
-                        {/* Center line with gradient */}
-                        <div className="relative h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
+            {/* Thin Structured Pattern Overlay */}
+            <div className="absolute inset-0 opacity-10"
+                style={{
+                    backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)',
+                    backgroundSize: '80px 80px'
+                }}>
+            </div>
 
-                        {/* Center dot */}
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                            <div className="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.6)]"></div>
-                        </div>
-                    </div>
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="max-w-4xl mx-auto flex flex-col items-center">
+                    {/* Visual signal change */}
+                    <div className="w-px h-24 bg-gradient-to-b from-[#64ffda]/40 to-transparent mb-8"></div>
+                    <span className="text-[10px] font-bold tracking-[0.4em] text-slate-500 uppercase">Transitions</span>
                 </div>
             </div>
         </section>

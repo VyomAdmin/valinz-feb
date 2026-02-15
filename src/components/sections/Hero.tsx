@@ -5,95 +5,96 @@ import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#050A18]">
+        <section className="relative min-h-screen flex items-center justify-center pt-24 pb-20 overflow-hidden bg-[#050A18]">
             {/* Immersive Background Effects */}
             <div className="absolute inset-0 z-0">
-                {/* Subtle Grid / Structural Pattern */}
-                <div className="absolute inset-0 opacity-[0.1]"
-                    style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #3b82f6 1px, transparent 0)', backgroundSize: '40px 40px' }}>
+                {/* Subtle Geometric Grid / Structured Pattern */}
+                <div className="absolute inset-0 opacity-[0.05]"
+                    style={{
+                        backgroundImage: 'radial-gradient(circle at 1px 1px, #64ffda 1px, transparent 0)',
+                        backgroundSize: '32px 32px'
+                    }}>
                 </div>
 
-                {/* Soft blue/teal lighting gradients */}
-                <div className="absolute top-[10%] right-[10%] w-[40%] h-[40%] bg-blue-600/10 rounded-full blur-[120px]"></div>
-                <div className="absolute bottom-[10%] left-[5%] w-[30%] h-[30%] bg-[#64ffda]/5 rounded-full blur-[100px]"></div>
+                {/* Soft blue lighting gradients */}
+                <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[60%] h-[40%] bg-[#3b82f6]/10 rounded-full blur-[120px]"></div>
+                <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 w-[40%] h-[30%] bg-[#64ffda]/5 rounded-full blur-[100px]"></div>
 
-                {/* Abstract animated lines */}
-                <div className="absolute inset-0 opacity-20">
-                    <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#64ffda]/30 to-transparent animate-pulse" style={{ animationDuration: '4s' }}></div>
+                {/* Subtle animated structural framework lines */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+                    <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#64ffda]/20 to-transparent animate-pulse" style={{ animationDuration: '5s' }}></div>
+                    <div className="absolute top-2/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#3b82f6]/20 to-transparent animate-pulse" style={{ animationDuration: '7s' }}></div>
+                    <div className="absolute top-0 left-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
+                    <div className="absolute top-0 right-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="container mx-auto px-6 relative z-10 text-center">
+                <div className="max-w-4xl mx-auto flex flex-col items-center">
 
-                    {/* Left Side: Content */}
-                    <div className="lg:col-span-7 flex flex-col items-start text-left">
-                        <div className="mb-6 inline-block px-4 py-1.5 border border-[#64ffda]/20 rounded-full backdrop-blur-md bg-blue-900/10">
-                            <span className="text-xs font-bold tracking-[0.2em] text-[#64ffda] uppercase">Trusted Governance Experts</span>
-                        </div>
+                    {/* Hero Visual Element: Icon in Glass Framed Container */}
+                    <div className="mb-14 relative group">
+                        <div className="absolute -inset-10 bg-[#64ffda]/10 blur-3xl rounded-full opacity-40 group-hover:opacity-60 transition-opacity duration-1000"></div>
 
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 tracking-tighter leading-[1.05] text-white">
-                            Intelligence-Driven Technology<br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400">Governance</span>
-                        </h1>
-
-                        <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-xl leading-relaxed font-medium">
-                            ValinzTech helps organizations build trust in the digital age through systematic governance frameworks and expert guidance.
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row gap-6 mb-16 w-full sm:w-auto">
-                            <Button variant="primary" href="#about" className="text-lg py-4 px-10 shadow-2xl shadow-blue-900/40 bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda]/20 group">
-                                Explore About Us <ChevronRight size={20} className="ml-2 inline group-hover:translate-x-1 transition-transform" />
-                            </Button>
-                            <Button variant="secondary" href="#contact" className="text-lg py-4 px-10 backdrop-blur-sm bg-white/5 border-white/10 hover:bg-white/10">
-                                Free Consultation
-                            </Button>
-                        </div>
-
-                        {/* Authority Tags */}
-                        <div className="flex flex-wrap gap-x-10 gap-y-4 text-sm font-semibold text-slate-400 border-t border-white/5 pt-10">
-                            <span className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#64ffda] shadow-[0_0_8px_#64ffda]"></span>
-                                Confident
-                            </span>
-                            <span className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                                Structured
-                            </span>
-                            <span className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-blue-300"></span>
-                                Enterprise-Grade
-                            </span>
-                        </div>
-                    </div>
-
-                    {/* Right Side: Valinz Icon */}
-                    <div className="lg:col-span-5 hidden lg:flex justify-center items-center">
-                        <div className="relative group">
-                            {/* Glass Framed Container Effect */}
-                            <div className="absolute -inset-10 bg-[#64ffda]/5 blur-3xl rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-1000"></div>
-
-                            <div className="relative z-10 transform hover:scale-105 transition-transform duration-700 ease-out">
-                                <div className="p-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] shadow-2xl">
-                                    <Image
-                                        src="/images/Valinz-Icon.jpeg"
-                                        alt="ValinzTech Icon"
-                                        width={450}
-                                        height={450}
-                                        className="w-[400px] h-auto rounded-[2rem] shadow-2xl contrast-110 saturate-[0.9] brightness-105"
-                                    />
-                                </div>
-                                {/* Subtle sheen overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none mix-blend-overlay rounded-[2.5rem]"></div>
+                        <div className="relative z-10 transform transition-transform duration-1000 ease-out">
+                            <div className="p-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] shadow-2xl">
+                                <Image
+                                    src="/images/Valinz-Icon.jpeg"
+                                    alt="ValinzTech Icon"
+                                    width={160}
+                                    height={160}
+                                    className="w-[120px] md:w-[140px] h-auto rounded-[2rem] shadow-2xl contrast-110 saturate-[0.9] brightness-105"
+                                />
                             </div>
-
-                            {/* Decorative structural lines */}
-                            <div className="absolute -top-12 -right-12 w-32 h-32 border border-[#64ffda]/10 rounded-full animate-pulse"></div>
-                            <div className="absolute -bottom-8 -left-8 w-20 h-20 border border-white/5 rounded-full"></div>
                         </div>
+
+                        {/* Decorative structural lines around icon */}
+                        <div className="absolute -top-6 -right-6 w-16 h-16 border-t border-r border-[#64ffda]/20 rounded-tr-3xl"></div>
+                        <div className="absolute -bottom-6 -left-6 w-16 h-16 border-b border-l border-[#64ffda]/20 rounded-bl-3xl"></div>
+                    </div>
+
+                    <div className="mb-8 inline-block px-5 py-2 border border-[#64ffda]/15 rounded-full backdrop-blur-md bg-blue-900/5">
+                        <span className="text-[10px] font-bold tracking-[0.3em] text-[#64ffda] uppercase">Intelligence-Driven Governance</span>
+                    </div>
+
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter leading-[1.0] text-white">
+                        Intelligence-Driven Technology<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500">Governance</span>
+                    </h1>
+
+                    <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-medium font-sans">
+                        ValinzTech helps organizations build trust in the digital age through systematic governance frameworks and expert guidance.
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row gap-6 mb-16 w-full sm:w-auto justify-center">
+                        <Button variant="primary" href="#about" className="text-sm py-4 px-12 uppercase tracking-widest bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda]/20 rounded-full group">
+                            Explore About Us <ChevronRight size={16} className="ml-2 inline group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                        <Button variant="secondary" href="#contact" className="text-sm py-4 px-12 uppercase tracking-widest backdrop-blur-sm bg-white/5 border-white/10 hover:bg-white/10 hover:text-white rounded-full">
+                            Free Consultation
+                        </Button>
+                    </div>
+
+                    {/* Authority Tags */}
+                    <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 border-t border-white/5 pt-12 mt-4 w-full">
+                        <span className="flex items-center gap-3">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#64ffda] shadow-[0_0_8px_#64ffda]"></span>
+                            Confident
+                        </span>
+                        <span className="flex items-center gap-3">
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                            Structured
+                        </span>
+                        <span className="flex items-center gap-3">
+                            <span className="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                            Enterprise-Grade
+                        </span>
                     </div>
                 </div>
             </div>
+
+            {/* Subtle Gradient Fade to Next Section */}
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050A18] to-transparent pointer-events-none"></div>
         </section>
     );
 };

@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   },
 };
 
+import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,7 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.variable} ${hankenGrotesk.variable} font-sans`}>{children}</body>
+      <body className={`${spaceGrotesk.variable} ${hankenGrotesk.variable} font-sans`}>
+        {children}
+        <StickyMobileCTA />
+      </body>
     </html>
   );
 }

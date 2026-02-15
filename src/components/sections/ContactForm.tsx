@@ -26,23 +26,23 @@ const ContactForm = () => {
     };
 
     return (
-        <section id="contact-form" className="py-20 bg-slate-950">
+        <section id="contact-form" className="py-24 bg-[#050A18]">
             <div className="container mx-auto px-6">
-                <div className="max-w-3xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">
                             Send Us a Message
                         </h2>
-                        <p className="text-xl text-slate-300">
-                            Fill out the form below and we'll get back to you within 24 hours
+                        <p className="text-lg text-slate-400 max-w-2xl mx-auto font-medium">
+                            Reach out for specific inquiries. Our team will respond within 24 hours.
                         </p>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="bg-slate-900/50 border border-slate-700 rounded-2xl p-8 md:p-12">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label htmlFor="name" className="block text-sm font-semibold text-slate-300 mb-2">
-                                    Full Name *
+                    <form onSubmit={handleSubmit} className="bg-[#0D1426]/30 border border-white/5 rounded-[2.5rem] p-8 md:p-16">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div className="space-y-2">
+                                <label htmlFor="name" className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">
+                                    Full Name
                                 </label>
                                 <input
                                     type="text"
@@ -51,13 +51,13 @@ const ContactForm = () => {
                                     required
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                                    className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-slate-600 focus:outline-none focus:border-blue-500/50 transition-all font-medium"
                                     placeholder="John Doe"
                                 />
                             </div>
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-semibold text-slate-300 mb-2">
-                                    Email Address *
+                            <div className="space-y-2">
+                                <label htmlFor="email" className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">
+                                    Email Address
                                 </label>
                                 <input
                                     type="email"
@@ -66,16 +66,16 @@ const ContactForm = () => {
                                     required
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                                    className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-slate-600 focus:outline-none focus:border-blue-500/50 transition-all font-medium"
                                     placeholder="john@company.com"
                                 />
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label htmlFor="company" className="block text-sm font-semibold text-slate-300 mb-2">
-                                    Company Name
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div className="space-y-2">
+                                <label htmlFor="company" className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">
+                                    Company
                                 </label>
                                 <input
                                     type="text"
@@ -83,12 +83,12 @@ const ContactForm = () => {
                                     name="company"
                                     value={formData.company}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
-                                    placeholder="Your Company"
+                                    className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-slate-600 focus:outline-none focus:border-blue-500/50 transition-all font-medium"
+                                    placeholder="Organization Name"
                                 />
                             </div>
-                            <div>
-                                <label htmlFor="phone" className="block text-sm font-semibold text-slate-300 mb-2">
+                            <div className="space-y-2">
+                                <label htmlFor="phone" className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">
                                     Phone Number
                                 </label>
                                 <input
@@ -97,30 +97,30 @@ const ContactForm = () => {
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
-                                    placeholder="+91 9953562762"
+                                    className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-slate-600 focus:outline-none focus:border-blue-500/50 transition-all font-medium"
+                                    placeholder="+91 99535 62762"
                                 />
                             </div>
                         </div>
 
-                        <div className="mb-8">
-                            <label htmlFor="message" className="block text-sm font-semibold text-slate-300 mb-2">
-                                Message *
+                        <div className="mb-12 space-y-2">
+                            <label htmlFor="message" className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">
+                                Message
                             </label>
                             <textarea
                                 id="message"
                                 name="message"
                                 required
-                                rows={6}
+                                rows={5}
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
-                                placeholder="Tell us about your governance needs..."
+                                className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-slate-600 focus:outline-none focus:border-blue-500/50 transition-all font-medium resize-none"
+                                placeholder="How can we assist with your governance needs?"
                             />
                         </div>
 
-                        <Button type="submit" variant="primary" className="w-full text-lg py-4">
-                            Send Message
+                        <Button type="submit" variant="primary" className="w-full text-xs py-5 uppercase tracking-[0.2em] font-bold bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda]/20 rounded-2xl transition-all duration-300">
+                            Send Secure Message
                         </Button>
                     </form>
                 </div>

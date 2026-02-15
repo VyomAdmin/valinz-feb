@@ -3,28 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a192f;
+  --background: #050A18;
   --foreground: #ccd6f6;
 
-  /* ValinzTech Palette */
-  --color-primary-dark: #0a192f;
-  /* Deep Blue Background */
-  --color-secondary-dark: #112240;
-  /* Navy - Card Background */
-  --color-tertiary-dark: #233554;
-  /* Slate Blue - Borders/Accents */
+  /* ValinzTech Palette - Strict Blue Only */
+  --color-primary-dark: #050A18;
+  --color-secondary-dark: #0D1426;
+  --color-tertiary-dark: #1E293B;
 
   --color-text-primary: #ccd6f6;
-  /* Soft Gray - Headings */
-  --color-text-secondary: #8892b0;
-  /* Muted Steel - Body */
+  --color-text-secondary: #94a3b8;
   --color-text-accent: #64ffda;
-  /* Tech Green/Blue for highlights - keeping subtle */
-  --color-text-white: #e6f1ff;
-  /* Bright White */
+  --color-text-white: #e2e8f0;
 
-  --font-heading: var(--font-space-grotesk);
-  --font-sans: var(--font-hanken-grotesk);
+  --font-heading: var(--font-space-grotesk), sans-serif;
+  --font-sans: var(--font-hanken-grotesk), sans-serif;
 }
 
 * {
