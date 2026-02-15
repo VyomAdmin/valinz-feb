@@ -58,7 +58,7 @@ h1 {
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 550;
 }
 
 h3 {
@@ -82,13 +82,30 @@ a[href^="mailto:"]:focus {
 }
 
 a:visited {
-  color: #64ffda;
+  color: inherit;
 }
 
-/* Ensure buttons and colored links don't inherit visited color if they are meant to be dark/different */
+/* Explicitly maintain button text visibility in visited state */
+.btn:visited {
+  color: inherit !important;
+}
+
+.btn-primary:visited {
+  color: var(--color-primary-dark) !important;
+}
+
+.btn-secondary:visited {
+  color: var(--color-text-white) !important;
+}
+
+.bg-\[\#64ffda\]:visited {
+  color: #000000 !important;
+}
+
+/* Ensure buttons and colored links don't inherit visited color */
 .btn:visited,
-.bg-white:visited {
-  color: inherit;
+[class*="bg-"]:visited {
+  color: inherit !important;
 }
 
 /* Utility Classes */
