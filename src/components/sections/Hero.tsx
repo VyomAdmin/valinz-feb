@@ -33,7 +33,7 @@ const Hero = () => {
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 tracking-tighter leading-[1.05] text-white">
-                            Intelligent Technology<br />
+                            Intelligence-Driven Technology<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400">Governance</span>
                         </h1>
 

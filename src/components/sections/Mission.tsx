@@ -6,7 +6,7 @@ const Mission = () => {
         {
             icon: Target,
             title: "Our Mission",
-            description: "To empower organizations with intelligent technology governance frameworks that build trust, ensure compliance, and drive sustainable digital transformation."
+            description: "To empower organizations with Intelligence-Driven Technology Governance governance frameworks that build trust, ensure compliance, and drive sustainable digital transformation."
         },
         {
             icon: Users,
